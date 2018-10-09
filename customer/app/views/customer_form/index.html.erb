@@ -1,0 +1,23 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>NAME</th>
+    <th>DOB</th>
+    <th>ADDRESS</th>
+    <th>PHONE NUMBER</th>
+  </tr>
+ 
+  <% @customer.each do |customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.DOB %></td>
+      <td><%= customer.Address %></td>
+      <td><%= customer.Phone_no %></td>
+      <td><%= link_to 'Show', customer_form_index_path(customer) %></td>
+      <td><%= link_to 'Destroy', customer_form_path(customer),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
