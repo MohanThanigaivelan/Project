@@ -1,0 +1,2 @@
+class CustomerForm < ApplicationRecord
+end
